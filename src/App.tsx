@@ -11,11 +11,8 @@ function App() {
     <div className="page-container">
       <ul>
         {products.map((product) => (
-          <li
-            key={product.id}
-            style={{ color: product.isFruit ? "green" : "red" }}
-          >
-            {product.title}
+          <li key={product.id}>
+            {product.title} {product.isFruit ? "(fruit)" : null}
           </li>
         ))}
       </ul>
